@@ -34,6 +34,12 @@
   <link href="./static/css/style-responsive.css" rel="stylesheet" />
   <link href="./static/css/xcharts.min.css" rel=" stylesheet">
   <link href="./static/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- =======================================================
     Theme Name: NiceAdmin
     Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -438,7 +444,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
               <i class="fa fa-cubes"></i>
-              <div class="count">1.426</div>
+              <div id="score"></div>
               <div class="title">Stock</div>
             </div>
             <!--/.info-box-->
@@ -454,7 +460,7 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h2><i class="fa fa-map-marker red"></i><strong>Countries</strong></h2>
+                <h2><i class="fa fa-map-marker red"></i><strong>Bitcoin Price</strong></h2>
                 <div class="panel-actions">
                   <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
                   <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
@@ -462,11 +468,12 @@
                 </div>
               </div>
               <div class="panel-body-map">
-                <div id="map" style="height:380px;"></div>
+                 <div id="stockPlot" style="height:380px;"></div>
               </div>
 
             </div>
           </div>
+
           <div class="col-md-3">
             <!-- List starts -->
             <ul class="today-datas">
@@ -509,7 +516,7 @@
           <div class="col-lg-9 col-md-12">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h2><i class="fa fa-flag-o red"></i><strong>Registered Users</strong></h2>
+                <h2><i class="fa fa-flag-o red"></i><strong>Bitcoin News</strong></h2>
                 <div class="panel-actions">
                   <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
                   <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
@@ -1029,7 +1036,9 @@
                       </div>
                     </form>
                   </div> -->
-
+                  <div >
+                    <div id="stockPlot" ></div>
+                 </div>  
 
                 <!-- </div> -->
                 <div class="widget-foot">
@@ -1065,6 +1074,13 @@
   <script src="./static/js/jquery-ui-1.10.4.min.js"></script>
   <script src="./static/js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="./static/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <!-- Visualizations -->
+  <script src="./static/js/coinPrice.js"></script>
+  <script src="./static/js/metrics.js"></script>
+
+
+
+
   <!-- bootstrap -->
   <script src="./static/js/bootstrap.min.js"></script>
   <!-- nice scroll -->

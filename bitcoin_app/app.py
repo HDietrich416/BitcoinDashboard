@@ -51,38 +51,89 @@ def main():
 @app.route("/api/main/news")
 def newsRoute(): 
     news = session.query(btc_news.Date,btc_news.Headline, btc_news.Paragraph).all()
-    news_dataset = []
-    for item in news:
-        news_dataset.append(item)
+
+    news_data = []
+
+    for i in news:
+        date = i[0]
+
+        event = i[1]
+        story = i[2]
+
+        news_output = {"News_Date": date ,"Headline": event, "Paragraph": story}
+
+        news_data.append(news_output)
     
-    return jsonify(news_dataset)
+    return jsonify(news_data)
+
 
 @app.route("/api/main/price")
 def priceRoute(): 
-    price = session.query(coin_price.Date,coin_price.Open_USD, coin_price.High_USD, coin_price.Low_USD, coin_price.Close_USD).all()
-    price_dataset = []
-    for item in price:
-        price_dataset.append(item)
     
-    return jsonify(price_dataset)
+    price_data = session.query(coin_price.Date,coin_price.Open_USD, coin_price.High_USD, coin_price.Low_USD, coin_price.Close_USD).all()
+    
+    price_Date = []
+    for item in price_data:
+        price_Date.append(item[0])
+    
+    price_Open = []
+    for item in price_data:
+        price_Open.append(item[1])
+    
+    price_High = []
+    for item in price_data:
+        price_High.append(item[2])
+    
+    price_Low = []
+    for item in price_data:
+        price_Low.append(item[3])
+    
+    price_Close = []
+    for item in price_data:
+        price_Close.append(item[4])
+    
+    price_output = [{ "price_Date" : price_Date,
+               "price_Open" : price_Open,
+               "price_High" : price_High,
+               "price_Low" : price_Low,
+               "price_Close" : price_Close
+     }]
+
+    return jsonify(price_output)
 
 @app.route("/api/main/marketcap")
 def marketcapRoute(): 
-    marketCap = session.query(market_cap.Cryptocurrencies, market_cap.Markets, market_cap.Market_Cap, market_cap.BTC_Dominance).all()
-    marcap_dataset = []
-    for item in marketCap:
-        marcap_dataset.append(item)
     
-    return jsonify(marcap_dataset)
+    Cryptocurrencies = session.query(market_cap.Cryptocurrencies).all()
+    Markets = session.query(market_cap.Markets).all()
+    Market_Cap = session.query(market_cap.Market_Cap).all()
+    BTC_Dominance = session.query(market_cap.BTC_Dominance).all()
+    
+    market_cap_output = {
+        "Cryptocurrencies": Cryptocurrencies, 
+        "Markets": Markets, 
+        "Market_Cap": Market_Cap, 
+        "BTC_Dominance": BTC_Dominance
+    }
+
+    return jsonify(market_cap_output)
 
 @app.route("/api/main/rating")
 def ratingRoute(): 
-    rating_data = session.query(rating.Date, rating.Rank, rating.Score).all()
-    rating_dataset = []
-    for item in rating_data:
-        rating_dataset.append(item)
+    rating_data = session.query(rating.Rank).all()
+
+    rating_date = session.query(rating.Date).all()
+
+    rating_score = session.query(rating.Score).all()
+  
     
-    return jsonify(rating_dataset)
+    rating_output = { "date": rating_date,
+                    "rating": rating_data, 
+                    "score": rating_score                    
+
+    }
+
+    return jsonify(rating_output)
 
 if __name__ == "__main__":
     app.run()
