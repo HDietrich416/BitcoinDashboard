@@ -40,7 +40,7 @@ function init() {
         var plot_data = [trace1, trace2];
 
         var plot_layout = {
-            title: `Bitcoin Price`,
+            title: `Bitcoin Price $ USD`,
             height: 600,
             width: 1000,
             xaxis: {
