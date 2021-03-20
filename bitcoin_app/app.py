@@ -38,6 +38,7 @@ btc_news = Base.classes.btc_news
 coin_price = Base.classes.coin_price
 market_cap = Base.classes.market_cap
 rating = Base.classes.rating
+fb_predictions = Base.classes.fb_predictions
 
 session = Session(engine)
 
@@ -118,22 +119,45 @@ def marketcapRoute():
 
     return jsonify(market_cap_output)
 
-@app.route("/api/main/rating")
-def ratingRoute(): 
-    rating_data = session.query(rating.Rank).all()
+# @app.route("/api/main/rating")
+# def ratingRoute(): 
+#     rating_data = session.query(rating.Rank).all()
 
-    rating_date = session.query(rating.Date).all()
+#     rating_date = session.query(rating.Date).all()
 
-    rating_score = session.query(rating.Score).all()
+#     rating_score = session.query(rating.Score).all()
   
     
-    rating_output = { "date": rating_date,
-                    "rating": rating_data, 
-                    "score": rating_score                    
+#     rating_output = { "date": rating_date,
+#                     "rating": rating_data, 
+#                     "score": rating_score                    
 
-    }
+#     }
 
-    return jsonify(rating_output)
+#     return jsonify(rating_output)
+
+@app.route("/api/main/fbpredictions")
+def fbpredictions():
+    fb_data = session.query(fb_predictions.date, fb_predictions.BTC_price_USD, fb_predictions.day).all()
+
+    btc_Date = []
+    for item in fb_data:
+        btc_Date.append(item[0])
+    
+    btc_Price = []
+    for item in fb_data:
+        btc_Price.append(item[1])
+
+    btc_Day = []
+    for item in fb_data:
+        btc_Day.append(item[2])
+    
+    
+    fb_output = [{ "Date": btc_Date, 
+                "Price": btc_Price, 
+                "Day": btc_Day}]
+
+    return jsonify(fb_output)
 
 if __name__ == "__main__":
     app.run()
