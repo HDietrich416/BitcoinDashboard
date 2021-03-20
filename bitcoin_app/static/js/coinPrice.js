@@ -77,7 +77,7 @@ function init() {
 
         var graphdiv = document.getElementById("stockPlot");
 
-        Plotly.newPlot(graphdiv, plot_data, plot_layout, {scrollZoom: true})
+        Plotly.newPlot(graphdiv, plot_data, plot_layout, {scrollZoom: false})
     });
 };
 

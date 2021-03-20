@@ -159,6 +159,26 @@ def fbpredictions():
 
     return jsonify(fb_output)
 
+@app.route("/api/main/fbpredictionsday")
+def fbpredictionsday():
+    day_data = session.query(fb_predictions.day, func.avg(fb_predictions.BTC_price_USD)).group_by(fb_predictions.day).all()
+
+    btc_Day = []
+    for item in day_data:
+        btc_Day.append(item[0])
+    
+    day_Price = []
+    for item in day_data:
+        day_Price.append(item[1])
+
+   
+    
+    day_output = [{ "Day": btc_Day, 
+                "Price": day_Price
+    }]
+
+    return jsonify(day_output)
+
 if __name__ == "__main__":
     app.run()
 
