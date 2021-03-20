@@ -468,7 +468,7 @@
                 </div>
               </div>
               <div class="panel-body-map">
-                 <div id="stockPlot" style="height:380px;"></div>
+                 <div id="stockPlot" style="height:500px;"></div>
               </div>
 
             </div>
@@ -516,7 +516,7 @@
           <div class="col-lg-9 col-md-12">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h2><i class="fa fa-flag-o red"></i><strong>Bitcoin News</strong></h2>
+                <h2><i class="fa fa-flag-o red"></i><strong>Bitcoin News - New York Times</strong></h2>
                 <div class="panel-actions">
                   <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
                   <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
@@ -527,15 +527,15 @@
                 <table class="table bootstrap-datatable countries">
                   <thead>
                     <tr>
-                      <th></th>
-                      <th>Country</th>
-                      <th>Users</th>
-                      <th>Online</th>
-                      <th>Performance</th>
+                      <!-- <th></th> -->
+                      <th>Headline</th>
+                      <th>Date</th>
+                      <th>Paragraph</th>
+                      <!-- <th>Performance</th> -->
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
+                  <tbody id = "newsTable">
+                    <!-- <tr>
                       <td><img src="./static/img/Germany.png" style="height:18px; margin-top:-2px;"></td>
                       <td>Germany</td>
                       <td>2563</td>
@@ -654,7 +654,7 @@
                         </div>
                         <span class="sr-only">20%</span>
                       </td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
               </div>
@@ -1077,6 +1077,7 @@
   <!-- Visualizations -->
   <script src="./static/js/coinPrice.js"></script>
   <script src="./static/js/metrics.js"></script>
+  <script src="./static/js/news.js"></script>
 
 
 
