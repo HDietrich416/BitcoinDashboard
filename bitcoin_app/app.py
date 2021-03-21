@@ -71,7 +71,7 @@ def newsRoute():
 @app.route("/api/main/price")
 def priceRoute(): 
     
-    price_data = session.query(coin_price.Date,coin_price.Open_USD, coin_price.High_USD, coin_price.Low_USD, coin_price.Close_USD).all()
+    price_data = session.query(coin_price.Date,coin_price.Open_USD, coin_price.High_USD, coin_price.Low_USD, coin_price.Close_USD, coin_price.Volume).all()
     
     price_Date = []
     for item in price_data:
@@ -92,12 +92,17 @@ def priceRoute():
     price_Close = []
     for item in price_data:
         price_Close.append(item[4])
+
+    volume = []
+    for item in price_data:
+        volume.append(item[5])
     
     price_output = [{ "price_Date" : price_Date,
                "price_Open" : price_Open,
                "price_High" : price_High,
                "price_Low" : price_Low,
-               "price_Close" : price_Close
+               "price_Close" : price_Close, 
+               "volume": volume
      }]
 
     return jsonify(price_output)
