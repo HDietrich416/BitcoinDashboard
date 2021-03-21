@@ -112,14 +112,16 @@ def marketcapRoute():
     
     Cryptocurrencies = session.query(market_cap.Cryptocurrencies).all()
     Markets = session.query(market_cap.Markets).all()
-    Market_Cap = session.query(market_cap.Market_Cap).all()
+    Market_Cap = session.query(market_cap.Total_Market_Cap).all()
     BTC_Dominance = session.query(market_cap.BTC_Dominance).all()
+    BTC_MC = session.query(market_cap.BTC_Market_Cap_T).all()
     
     market_cap_output = {
         "Cryptocurrencies": Cryptocurrencies, 
         "Markets": Markets, 
         "Market_Cap": Market_Cap, 
-        "BTC_Dominance": BTC_Dominance
+        "BTC_Dominance": BTC_Dominance, 
+        "BTC_Market_Cap_T": BTC_MC
     }
 
     return jsonify(market_cap_output)

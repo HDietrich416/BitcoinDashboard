@@ -7,8 +7,6 @@ d3.json("/api/main/price").then(function(data) {
   var priceDate = data.map(d => d.price_Date)[0][0];
   var priceCloseOld = data.map(d => d.price_Close)[0][1];
   var volume = data.map(d => d.volume)[0][0];
-  console.log(priceClose)
-  console.log(priceCloseOld)
 
 
 
@@ -20,7 +18,7 @@ d3.json("/api/main/price").then(function(data) {
 
   var formatter_percent = new Intl.NumberFormat('en-US', {
     style: 'percent',
-    maximumFractionDigits: 0,
+    maximumFractionDigits: 2,
   });
 
   var formatter_comma = new Intl.NumberFormat('en-US', {
@@ -40,13 +38,17 @@ d3.json("/api/main/price").then(function(data) {
 
   document.getElementById("volume").innerText = formatter_comma.format(volume)
 
+  
+});
+
+d3.json("/api/main/marketcap").then(function(mc_data) {
+
+    var marketcap = mc_data.BTC_Market_Cap_T
+    console.log(marketcap)
+
+    document.getElementById("marketCap").innerText = marketcap
 
 
-  
 
-  
-  
 
- 
-  
   });
