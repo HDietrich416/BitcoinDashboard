@@ -3,10 +3,10 @@
 d3.json("/api/main/price").then(function(data) {
 
   // pull latest closing price and date
-  var priceClose = data.map(d => d.price_Close)[0][0];
-  var priceDate = data.map(d => d.price_Date)[0][0];
-  var priceCloseOld = data.map(d => d.price_Close)[0][1];
-  var volume = data.map(d => d.volume)[0][0];
+  var priceClose = data.map(d => d.price_Close)[0][1];
+  var priceDate = data.map(d => d.price_Date)[0][1];
+  var priceCloseOld = data.map(d => d.price_Close)[0][2];
+  var volume = data.map(d => d.volume)[0][1];
 
 
 
