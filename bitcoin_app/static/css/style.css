@@ -2300,6 +2300,8 @@ div[data-role="editor-toolbar"] {
 
   border-left-color: #ccc!important;
 
+  padding: 10px;
+
 }
 
 .panel .panel-body-map {
@@ -2312,7 +2314,7 @@ div[data-role="editor-toolbar"] {
 
   height:500px;
 
- 
+  align-content: center;
 
   border-top: none;
 
@@ -2323,6 +2325,15 @@ div[data-role="editor-toolbar"] {
   border-left-color: #ccc!important;
 
 }
+
+.panel-body-pie-chart {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  
+  }
 
 .panel .panel-body.no-padding {
 
@@ -9904,4 +9915,11 @@ span.customSelect.changed {
 
 #sendmessage.show, #errormessage.show, .show {
 	display:block;
+}
+
+#components {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }

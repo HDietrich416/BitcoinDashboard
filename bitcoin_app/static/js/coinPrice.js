@@ -38,8 +38,8 @@ function init() {
 
         var plot_layout = {
             title: `Bitcoin Price $ USD`,
-            height: 600,
-            width: 1000,
+            height: 500,
+            // width: 1300,
             xaxis: {
             type: "date",
             rangeselector: {

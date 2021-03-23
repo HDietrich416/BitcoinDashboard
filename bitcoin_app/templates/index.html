@@ -474,7 +474,7 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h2><i class="fa fa-map-marker red"></i><strong>Bitcoin Price</strong></h2>
+                <h2><strong>Bitcoin Price</strong></h2>
                 <div class="panel-actions">
                   <!-- <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
                   <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
@@ -491,10 +491,10 @@
           <div class="col-md-3">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h2><i class="fa fa-map-marker red"></i><strong>Market Capitalization</strong></h2>
+                <h2><strong>Market Capitalization</strong></h2>
               </div>
-            </div>
-            <div class="panel-body-map">
+            
+            <div class="panel-body-pie-chart">
 
             <!-- List starts -->
             <!-- <ul class="today-datas"> -->
@@ -503,6 +503,7 @@
                 <!-- Graph -->
                 <div><svg id="pie-chart"></svg></div>
             </div>
+          </div>  
                 <!-- <div><span id="pie-chart" class="spark"></span></div> -->
                 <!-- Text -->
                 <!-- <div class="datas-text">Market Capitalization</div> -->
@@ -1097,7 +1098,7 @@
         </div>
         <!-- project team & activity end -->
         <div class="row">
-          <div class="col-md-4 portlets">
+          <div class="col-md-6 portlets">
             <!-- Widget -->
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -1111,7 +1112,7 @@
 
               <div class="panel-body">
           <!-- <div class="col-lg-5 col-md-5"> -->
-                  <img src="./static/img/modelcomponents.jpg">
+                  <img id ="components" src="./static/img/modelcomponents.jpg">
               </div>
             </div>
           </div>
@@ -1121,15 +1122,34 @@
               <div class="panel-heading">
                 <div class="pull-left">Price Prediction $USD</div>
               </div>
-
               <div class="panel-body">
-                  <div id="plot"></div>
+                <div class="card" style="width: 18rem;">
+                
+                    <!-- <div class="w-100 p-3"> -->
+                      <div id="plot"></div>
+                </div>
               </div>
+                <!-- </div>
+              </div> -->
             </div>
           </div>        
             
         </div>
+        <div class="row">
 
+          <div class="col-lg-9 col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2><strong>Analysis</strong></h2>
+              </div>
+              <div class="panel-body">
+                <p>Facebook Prophet was used to gain time series insights and forecast the price of Bitcoin 30 days out.</p>
+                <p>The group of three charts show the fbprophet model components. Bitcoin's price is highest on Wednesday and Saturday (best time to sell). Bitcoin's price is lowest on Sunday and Tuesday (best time to buy).</p>
+                <p>The single chart shows the forecast price of Bitcoin 30 days out using Facebook Prophet's machine learning algorithm.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </section>
       <div class="text-right">

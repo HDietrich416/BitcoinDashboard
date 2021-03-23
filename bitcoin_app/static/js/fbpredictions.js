@@ -42,8 +42,8 @@
     
             var plot_layout = {
                 title: `Bitcoin Price Prediction $USD`,
-                height: 600,
-                width: 1000,
+                height: 500,
+                width: 600,
                 xaxis: {
                 // range: [startDate, endDate],
                 type: "date",
