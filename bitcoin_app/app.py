@@ -126,23 +126,6 @@ def marketcapRoute():
 
     return jsonify(market_cap_output)
 
-# @app.route("/api/main/rating")
-# def ratingRoute(): 
-#     rating_data = session.query(rating.Rank).all()
-
-#     rating_date = session.query(rating.Date).all()
-
-#     rating_score = session.query(rating.Score).all()
-  
-    
-#     rating_output = { "date": rating_date,
-#                     "rating": rating_data, 
-#                     "score": rating_score                    
-
-#     }
-
-#     return jsonify(rating_output)
-
 @app.route("/api/main/fbpredictions")
 def fbpredictions():
     fb_data = session.query(fb_predictions.date, fb_predictions.BTC_price_USD, fb_predictions.day).all()

@@ -6,9 +6,6 @@ function init() {
         var priceHigh = data.map(d => d.price_High);
         var priceLow = data.map(d => d.price_Low);
         var priceDate = data.map(d => d.price_Date)
-       
-        // const startDate = "2020-01-02";
-        // const endDate = "2021-01-29";
 
     //Closing Price line
         var trace1 = {
@@ -39,7 +36,6 @@ function init() {
         var plot_layout = {
             title: `Bitcoin Price $ USD`,
             height: 500,
-            // width: 1300,
             xaxis: {
             type: "date",
             rangeselector: {
