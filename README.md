@@ -4,16 +4,16 @@ Heather Dietrich <br />
 
 
 ## Overview
-This dashboard will track the Bitcoin based on:
+This dashboard will track Bitcoin based on:
  
-•	Volume (daily data)
-•	Price (daily data)
-•	market cap (daily data)
-•	News
-•	Google search interest
+•	Volume (24hr)
+•	$USD Closing Price - daily
+•   % Change in Price (day over day)
+•   Trending of Bitcoin price over time including open, close, high, and low daily
+•	Market Cap ($USD)
+•	Market News
  
-
-Facebook Prophet will be applied to forecast the future price of Bitcoin and provide additional insight into trends on price (ie. Best days of the week to buy vs. sell)
+Facebook Prophet will be applied to forecast the future price of Bitcoin and provide additional insight into trends on price (ie. Best days of the week to buy vs. sell). 
 
 
 <!-- ## Data Sources
