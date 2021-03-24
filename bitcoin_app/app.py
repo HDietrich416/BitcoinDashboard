@@ -21,11 +21,11 @@ app = Flask(__name__)
 
 # Create an engine 
 
-server= "bootcampdb.cmwhqarpyd9v.ca-central-1.rds.amazonaws.com"
-database = "postgres"
+server= "hansken.db.elephantsql.com"
+database = "igmwluaw"
 port ="5432"
-username = "root"
-password = "xy92Hdie"
+username = "igmwluaw"
+password = "b61e22RUrQmbTP3Pp4KR7OxlYaSqrwUN"
 
 conn = f"postgres://{username}:{password}@{server}:{port}/{database}"
 
@@ -38,7 +38,6 @@ Base.prepare(engine, reflect=True)
 btc_news = Base.classes.btc_news
 coin_price = Base.classes.coin_price
 market_cap = Base.classes.market_cap
-rating = Base.classes.rating
 fb_predictions = Base.classes.fb_predictions
 
 session = Session(engine)
