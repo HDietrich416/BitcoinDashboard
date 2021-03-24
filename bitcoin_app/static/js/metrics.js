@@ -57,7 +57,7 @@ d3.json("/api/main/marketcap").then(function(mc_data) {
   });
 
   d3.json("/api/main/marketcap").then(function(data) {
-    console.log(data)
+    
     var BTC_marketcap = parseFloat(data.BTC_Dominance[0]);
     var otherCrypto = 100- BTC_marketcap
 
