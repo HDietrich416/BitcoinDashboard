@@ -51,5 +51,5 @@ Data was loaded into PosgreSQL Database using SQL Alchemy.
 •	Using SQLAlchemy, data was selected from  database and output in json format to Flask app route <br />
 •	Visualizations were created in javascript pulling input data from Flask app routes and outputs were sent to HTML. <br />
 •	Dashboard page format was built off of Bootstrap Made https://bootstrapmade.com/ template. <br />
-•	App was deployed to Heroku https://dashboard.heroku.com/apps through GitHub. <br />
+•	App was deployed to Heroku through GitHub here: https://bitcoindash.herokuapp.com/. <br />
 
