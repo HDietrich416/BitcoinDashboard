@@ -40,16 +40,22 @@ d3.json("/api/main/price").then(function(data) {
 
 d3.json("/api/main/marketcap").then(function(mc_data) {
 
+  var formatter_tr = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 2,
+  });
+
     var marketcap = mc_data.BTC_Market_Cap_T
     
 
-    document.getElementById("marketCap").innerText = marketcap
+    document.getElementById("marketCap").innerText = formatter_tr.format(marketcap)
 
 
 
 
   });
-  
+
   d3.json("/api/main/marketcap").then(function(data) {
     console.log(data)
     var BTC_marketcap = parseFloat(data.BTC_Dominance[0]);
