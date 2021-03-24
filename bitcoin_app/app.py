@@ -14,8 +14,7 @@ from sqlalchemy import func
 import json
 import numpy as np
 import pandas as pd
-from boto.s3.connection import S3Connection
-s3 = S3Connection(os.environ['server'], os.environ['database'], os.environ['port'], os.environ['username']), os.environ['password']
+
 
 app = Flask(__name__)
 
