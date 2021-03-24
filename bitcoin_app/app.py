@@ -22,11 +22,11 @@ app = Flask(__name__)
 
 # Create an engine 
 
-# server= "bootcampdb.cmwhqarpyd9v.ca-central-1.rds.amazonaws.com"
-# database = "postgres"
-# port ="5432"
-# username = "root"
-# password = "xy92Hdie"
+server= "bootcampdb.cmwhqarpyd9v.ca-central-1.rds.amazonaws.com"
+database = "postgres"
+port ="5432"
+username = "root"
+password = "xy92Hdie"
 
 conn = f"postgres://{username}:{password}@{server}:{port}/{database}"
 
