@@ -49,3 +49,6 @@ d3.json("/api/main/marketcap").then(function(mc_data) {
 
 
   });
+
+  d3.json("/api/main/marketcap").then(function(data) {
+    console.log(data)});
