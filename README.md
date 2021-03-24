@@ -6,12 +6,12 @@ Heather Dietrich <br />
 ## Overview
 This dashboard https://bitcoindash.herokuapp.com/ will track Bitcoin based on:
  
-•	Volume (24hr)
-•	$USD Closing Price - daily
-•   % Change in Price (day over day)
-•   Trending of Bitcoin price over time including open, close, high, and low (daily)
-•	Market Cap ($USD)
-•	Market News
+•	Volume (24hr) <br />
+•	$USD Closing Price - daily <br />
+•   % Change in Price (day over day) <br />
+•   Trending of Bitcoin price over time including open, close, high, and low (daily) <br />
+•	Market Cap ($USD) <br />
+•	Market News <br />
  
 Facebook Prophet https://facebook.github.io/prophet/ is applied to forecast the future price of Bitcoin and provide additional insight into trends on price (ie. Best days of the week to buy vs. sell). 
 
@@ -48,8 +48,8 @@ Extracted data was transformed using pandas (Python).
 ### Load:
 Data was loaded into PosgreSQL Database using SQL Alchemy. 
 ### Visualize:
-Using SQLAlchemy, data was selected from  database and output in json format to Flask app route <br />
-Visualizations were created in javascript pulling input data from Flask app routes and outputs were sent to HTML. <br />
-Dashboard page format was built off of Bootstrap Made https://bootstrapmade.com/ template. <br />
-App was deployed to Heroku https://dashboard.heroku.com/apps through GitHub. <br />
+•	Using SQLAlchemy, data was selected from  database and output in json format to Flask app route <br />
+•	Visualizations were created in javascript pulling input data from Flask app routes and outputs were sent to HTML. <br />
+•	Dashboard page format was built off of Bootstrap Made https://bootstrapmade.com/ template. <br />
+•	App was deployed to Heroku https://dashboard.heroku.com/apps through GitHub. <br />
 
