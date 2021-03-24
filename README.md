@@ -4,7 +4,7 @@ Heather Dietrich <br />
 
 
 ## Overview
-This dashboard (https://bitcoindash.herokuapp.com/) will track Bitcoin based on:
+This dashboard https://bitcoindash.herokuapp.com/ will track Bitcoin based on:
  
 •	Volume (24hr)
 •	$USD Closing Price - daily
@@ -13,7 +13,7 @@ This dashboard (https://bitcoindash.herokuapp.com/) will track Bitcoin based on:
 •	Market Cap ($USD)
 •	Market News
  
-Facebook Prophet (https://facebook.github.io/prophet/) is applied to forecast the future price of Bitcoin and provide additional insight into trends on price (ie. Best days of the week to buy vs. sell). 
+Facebook Prophet https://facebook.github.io/prophet/ is applied to forecast the future price of Bitcoin and provide additional insight into trends on price (ie. Best days of the week to buy vs. sell). 
 
 ## Data Sources
 ### Data 1
@@ -41,14 +41,15 @@ Description: Key Headlines and leading paragragh for most recent stories related
 
 
 ## Process
-
-•	Extract: Data was extracted from the web using API calls and web scraping (Python) 
-•	Transform: Extracted data was transformed using pandas (Python).
-•	Load: Data was loaded into PosgreSQL Database using SQL Alchemy. 
-<br>
-•	Visualize:
-•	Using SQLAlchemy, data was selected from  database and output in json format to Flask app route
-•	Visualizations were created in javascript pulling input data from Flask app routes and outputs were sent to HTML.
-•	Dashboard page format was built off of Bootstrap Made (https://bootstrapmade.com/) template.
-•	App was deployed to Heroku(https://dashboard.heroku.com/apps) through GitHub. 
+### Extract:
+Data was extracted from the web using API calls and web scraping (Python) 
+### Transform:
+Extracted data was transformed using pandas (Python).
+### Load:
+Data was loaded into PosgreSQL Database using SQL Alchemy. 
+### Visualize:
+Using SQLAlchemy, data was selected from  database and output in json format to Flask app route <br />
+Visualizations were created in javascript pulling input data from Flask app routes and outputs were sent to HTML. <br />
+Dashboard page format was built off of Bootstrap Made https://bootstrapmade.com/ template. <br />
+App was deployed to Heroku https://dashboard.heroku.com/apps through GitHub. <br />
 
